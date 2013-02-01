@@ -81,6 +81,9 @@ static char imageURLKey;
                     } completion:NULL];
                 }
                 
+                if (!self.image) {
+                    self.image=image;
+                }
                 if (success)
                 {
                     success(request, response, image);
